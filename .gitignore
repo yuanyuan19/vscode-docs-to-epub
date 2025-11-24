@@ -8,3 +8,9 @@ node_modules
 
 *.sublime-project
 *.sublime-workspace
+
+
+docs-translated
+.translation-cache
+
+.env

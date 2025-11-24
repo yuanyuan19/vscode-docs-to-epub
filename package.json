@@ -11,14 +11,26 @@
   "scripts": {
     "check-lfs": "node ./build/check-lfs.js",
     "lint": "eslint **/*.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "translate": "node ./build/translate-docs.js",
+    "build:epub": "node ./build/markdown-to-epub.js",
+    "build:epub:translated": "USE_TRANSLATED=true node ./build/markdown-to-epub.js",
+    "translate-and-build": "npm run translate && npm run build:epub:translated"
   },
   "devDependencies": {
+    "eslint": "^8.0.0",
     "eslint-plugin-security": "^1.7.1",
     "gulp": "~5.0.0",
     "husky": "^7.0.0",
     "lint-staged": "^12.3.3",
-    "shelljs": "^0.8.5"
+    "shelljs": "^0.8.5",
+    "openai": "^4.20.0",
+    "@anthropic-ai/sdk": "^0.20.0",
+    "dotenv": "^16.3.1",
+    "chalk": "^4.1.2",
+    "progress": "^2.0.3",
+    "p-limit": "^5.0.0",
+    "axios": "^1.6.0"
   },
   "lint-staged": {
     "*.{gif,mp4,jpg,png,GIF,MP4,JPG,PNG}": [

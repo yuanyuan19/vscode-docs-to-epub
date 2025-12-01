@@ -13,7 +13,7 @@ You can also use handoffs to create guided workflows between agents, allowing yo
 This article describes how to create and manage custom agents in VS Code.
 
 > [!NOTE]
-> Custom agents are available as of VS Code release 1.106 and in preview. Custom agents were previously known as custom chat modes.
+> Custom agents are available as of VS Code release 1.106. Custom agents were previously known as custom chat modes.
 
 ## What are custom agents?
 
@@ -161,7 +161,7 @@ If you have multiple custom agents, you can customize which ones appear in the a
 
 You can specify the list of available tools for both a custom agent and prompt file by using the `tools` metadata field. Prompt files can also reference a custom agent by using the `agent` metadata field.
 
-The list available tools in chat is determined by the following priority order:
+The list of available tools in chat is determined by the following priority order:
 
 1. Tools specified in the prompt file (if any)
 2. Tools from the referenced custom agent in the prompt file (if any)
